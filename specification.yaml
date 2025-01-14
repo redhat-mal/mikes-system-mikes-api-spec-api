@@ -1,0 +1,10 @@
+openapi: 3.0.3
+info:
+  title: mikes-api-spec
+  description: |-
+    Mikes Testing
+  version: 'v1'
+servers:
+  - url: "http://localhost:8080"
+  - url: "https://microcks-microcks.apps.cluster-ctm2d.ctm2d.sandbox101/rest/mikes-api-spec/v1"
+paths: {}

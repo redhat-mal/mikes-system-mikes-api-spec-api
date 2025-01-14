@@ -1,0 +1,24 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: "mikes-api-spec"
+  title: "mikes-api-spec"
+  description: "Mikes Testing"
+  annotations:
+    backstage.io/spectral-ruleset-url: https://raw.githubusercontent.com/redhat-mal/spectral-rules/main/ruleset.yaml
+  links:
+    - url: https://registry-apicurio-registry.apps.cluster-ctm2d.ctm2d.sandbox101/ui/artifacts/com.redhat/mikes-api-spec/versions/latest
+      title: Apicurio Registry
+      icon: web
+    - url: https://microcks-microcks.apps.cluster-ctm2d.ctm2d.sandbox101/#/services?name=mikes-api-spec
+      title: Microcks
+    - url: https://microcks-microcks.apps.cluster-ctm2d.ctm2d.sandbox101/rest/ratings/v1
+      title: Mock
+      icon: web
+spec:
+  type: openapi
+  system: system:default/mikes-system
+  owner: "group:default/backstage-admins"
+  lifecycle: production
+  definition:
+    $openapi: https://github.com/redhat-mal/mikes-system-mikes-api-spec-api/blob/main/specification.yaml
