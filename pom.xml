@@ -31,7 +31,7 @@
                       <goal>register</goal> 
                     </goals>
                     <configuration>
-                      <registryUrl>https://registry-apicurio-registry.apps.cluster-ctm2d.ctm2d.sandbox101</registryUrl> 
+                      <registryUrl>https://registry-apicurio-registry.apps.cluster-ctm2d.ctm2d.sandbox101.opentlc.com</registryUrl> 
                       <artifacts>
                         <artifact>
                           <groupId>com.redhat</groupId>
