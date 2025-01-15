@@ -7,4 +7,41 @@ info:
 servers:
   - url: "http://localhost:8080"
   - url: "https://microcks-microcks.apps.cluster-ctm2d.ctm2d.sandbox101/rest/mikes-api-spec/v1"
-paths: {}
+paths:
+  /planets/{planetId}:
+    get:
+      operationId: onePlanet
+      summary: Fetch one planet by position
+      description: Get the data relating to one planet
+      parameters:
+      - name: planetId
+        in: path
+        required: true
+        schema:
+          type: number
+          example: 4
+
+      responses:
+        '200':
+          description: Planets in a list
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/planet"
+components:
+  schemas:
+    planet:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of planet
+          example: "Saturn"
+        position:
+          type: number
+          description: Order in place from the sun
+          example: 6
+        moons:
+          type: number
+          description: Number of moons, according to NASA
+          example: 62
